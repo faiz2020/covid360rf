@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.about.AboutActivity"
+    android:fillViewport="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/touchAreaLarge"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/textLarge"
+                android:padding="@dimen/paddingSmall"
+                android:gravity="center_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/developed_by"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/text_app_developers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/app_devs"
+                    android:gravity="center_horizontal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:linksClickable="true"
+                    android:autoLink="web"
+                    android:textColor="@color/purple_500"
+                    android:longClickable="true"
+                    android:textIsSelectable="true"
+                    />
+            </LinearLayout>
+
+            <!--<WebView
+                android:id="@+id/web_view_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/touchAreaLarge"
+                android:padding="@dimen/paddingLarge"/>-->
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.core.widget.NestedScrollView>
