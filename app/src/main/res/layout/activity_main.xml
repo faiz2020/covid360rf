@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/logovaccine_foreground" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:padding="3dp"
+        android:id="@+id/vaccine"
+        android:text="vaccinated"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        />
+    <TextView
+        android:id="@+id/idvaccinaed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_below="@id/vaccine"
+        android:text="00"
+        android:textStyle="bold"
+        android:textSize="25dp"
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idvaccinaed">
+        <EditText
+            android:id="@+id/idPinCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@id/idbutton"
+            android:hint="Enter PinCode"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/idbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@color/purple_200"
+            android:text="Search"
+            android:textAllCaps="false" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/idPinCode"
+            tools:listitem="@layout/center_item" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
