@@ -3,4 +3,19 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="please_wait">Please wait..</string>
+
+    <!-- card View Across india -->
+    <string name="across_india_title">Across India</string>
+    <string name="edit_text_hint_search_state">Search states</string>
+    <string name="text_view_title_all_states_ut_stats">All State/UT Stats</string>
+    <string name="tv_heading_active_cases">Active</string>
+    <string name="tv_heading_recovered_cases">Recovered</string>
+    <string name="tv_heading_deaths">Deaths</string>
+    <string name="tv_heading_confirmed_cases">Confirmed</string>
+    <string name="tv_main_title_cardView">Across India</string>
+    <string name="tv_row_state_title">Delhi</string>
+    <string name="total_cases_text">Total cases</string>
+    <string name="recovered">Recovered</string>
+    <string name="refresh_text_menu">Refresh</string>
 </resources>

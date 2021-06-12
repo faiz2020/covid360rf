@@ -1,4 +1,4 @@
-package in.covid360rf.covid360.ui.home
+package `in`.covid360rf.covid360.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <color name="purple_200">#69e2ff</color>
+    <color name="purple_500">#00b0ff</color>
+    <color name="purple_700">#0081cb</color>
+    <color name="teal_200">#ff5bff</color>
+    <color name="teal_500">#d500f9</color>
+    <color name="teal_700">#9e00c5</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="gray">#eeeeee</color>
+
+
+
+    <color name="color_one">#fb7268</color>
+    <color name="color_white">#ededf2</color>
+    <color name="color_two">#E3E0E0</color>
+
+
+    <color name="confirmed_cases">#ffa726</color>
+    <color name="recovered">#338a3e</color>
+    <color name="deaths">#d50000</color>
+    <color name="active">#29b6f6</color>
+    <color name="lightGray">#fafafa</color>
+
+    <color name="primaryColor">#00b0ff</color>
+    <color name="primaryLightColor">#69e2ff</color>
+    <color name="primaryDarkColor">#0081cb</color>
+    <color name="secondaryColor">#d500f9</color>
+    <color name="secondaryLightColor">#ff5bff</color>
+    <color name="secondaryDarkColor">#9e00c5</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
 </resources>

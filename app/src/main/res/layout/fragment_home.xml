@@ -1,22 +1,332 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.HomeFragment"
+    android:fillViewport="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_view_graph_height"
+        android:layout_margin="@dimen/card_view_content_margin"
+        app:cardCornerRadius="@dimen/card_view_corner_radius"
+        android:elevation="@dimen/card_view_elevation"
+        android:layout_marginTop="@dimen/card_view_graph_margin_top"
+        tools:ignore="UnusedAttribute" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <org.eazegraph.lib.charts.PieChart
+                android:id="@+id/pieChart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/pie_chart_margin"
+                android:padding="@dimen/pie_chart_padding" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/card_view_pie_chart_ll_left_margin"
+                android:layout_marginStart="@dimen/card_view_pie_chart_ll_left_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <View
+                        android:layout_width="@dimen/view_size"
+                        android:layout_height="@dimen/view_size"
+                        android:background="@color/confirmed_cases"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_cases_text"
+                        android:layout_marginLeft="@dimen/view_text_margin_left"
+                        android:layout_marginStart="@dimen/view_text_margin_left" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+                    <View
+                        android:layout_width="@dimen/view_size"
+                        android:layout_height="@dimen/view_size"
+                        android:background="@color/recovered"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/recovered"
+                        android:layout_marginLeft="@dimen/view_text_margin_left"
+                        android:layout_marginStart="@dimen/view_text_margin_left" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+                    <View
+                        android:layout_width="@dimen/view_size"
+                        android:layout_height="@dimen/view_size"
+                        android:background="@color/deaths"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_heading_deaths"
+                        android:layout_marginLeft="@dimen/view_text_margin_left"
+                        android:layout_marginStart="@dimen/view_text_margin_left" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+                    <View
+                        android:layout_width="@dimen/view_size"
+                        android:layout_height="@dimen/view_size"
+                        android:background="@color/active"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_heading_active_cases"
+                        android:layout_marginLeft="@dimen/view_text_margin_left"
+                        android:layout_marginStart="@dimen/view_text_margin_left" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/card_view_content_margin"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="@dimen/card_view_corner_radius"
+        android:elevation="@dimen/card_view_elevation"
+        tools:ignore="UnusedAttribute">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_main_title_cardView"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_four_heading_card_view"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="@dimen/margin_left_card_view"
+                android:layout_marginStart="@dimen/margin_left_card_view" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:layout_marginLeft="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:layout_marginTop="@dimen/margin_top_headings_card_view"
+                android:layout_marginRight="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:layout_marginEnd="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_heading_active_cases"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_four_heading_card_view"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_heading_recovered_cases"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_four_heading_card_view"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:layout_marginLeft="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:layout_marginTop="@dimen/margin_top_for_placeholders_text"
+                android:layout_marginRight="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:layout_marginEnd="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/activeCases"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="235980"
+                    android:layout_weight="1"
+                    android:textColor="@color/active"
+                    android:textSize="@dimen/text_size_number_placeHolders_card_view"/>
+                <TextView
+                    android:id="@+id/recoveredCases"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="23400"
+                    android:layout_weight="1"
+                    android:textColor="@color/recovered"
+                    android:textSize="@dimen/text_size_number_placeHolders_card_view"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:layout_marginLeft="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:layout_marginTop="@dimen/margin_top_headings_card_view"
+                android:layout_marginRight="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:layout_marginEnd="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_heading_deaths"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_four_heading_card_view"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_heading_confirmed_cases"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_four_heading_card_view"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:layout_marginLeft="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:layout_marginTop="@dimen/margin_top_for_placeholders_text"
+                android:layout_marginRight="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:layout_marginEnd="@dimen/margin_left_right_ll_horizontal_card_view"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/deaths"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="3450"
+                    android:layout_weight="1"
+                    android:textColor="@color/deaths"
+                    android:textSize="@dimen/text_size_number_placeHolders_card_view"/>
+                <TextView
+                    android:id="@+id/confirmedCases"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="345689"
+                    android:layout_weight="1"
+                    android:textColor="@color/confirmed_cases"
+                    android:textSize="@dimen/text_size_number_placeHolders_card_view"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightGray"/>
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:drawableLeft="@drawable/ic_search"
+        android:background="@drawable/search_border"
+        android:maxLines="1"
+        android:drawablePadding="13dp"
+        android:hint="@string/edit_text_hint_search_state"
+        android:paddingLeft="8dp"
+        android:textSize="14sp"
+        android:layout_margin="10dp"
+        android:paddingStart="8dp"
+        android:inputType="text"
+        tools:ignore="RtlSymmetry"
+        android:drawableStart="@drawable/ic_search"
+        android:autofillHints="@string/edit_text_hint_search_state" />
 
     <TextView
-        android:id="@+id/text_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="@string/text_view_title_all_states_ut_stats"
+        android:layout_margin="10dp"
+        android:textSize="@dimen/text_size_all_states_heading"
+        android:textColor="@color/colorBlack"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_left_heading_states"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/margin_left_heading_states">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tv_heading_active_cases"
+            android:textColor="@color/active"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tv_heading_recovered_cases"
+            android:textColor="@color/recovered"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tv_heading_deaths"
+            android:textColor="@color/deaths"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tv_heading_confirmed_cases"
+            android:textColor="@color/confirmed_cases"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:fillViewport="true"
+        tools:ignore="NestedScrolling">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_states_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+
+</LinearLayout>
+</ScrollView>

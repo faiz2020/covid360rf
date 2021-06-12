@@ -1,4 +1,4 @@
-package in.covid360rf.covid360.ui.dashboard
+package `in`.covid360rf.covid360.ui.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater

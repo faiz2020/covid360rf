@@ -2,4 +2,30 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- progress dialog dimens-->
+    <dimen name="progress_dialog_content_padding">10dp</dimen>
+    <dimen name="progress_text_size">18sp</dimen>
+    <dimen name="progress_textView_margin_start_left">10dp</dimen>
+    <dimen name="progress_bar_size">50dp</dimen>
+
+    <!-- Across India card view -->
+    <dimen name="margin_left_card_view">10dp</dimen>
+    <dimen name="margin_left_right_ll_horizontal_card_view">10dp</dimen>
+    <dimen name="text_size_number_placeHolders_card_view">25sp</dimen>
+    <dimen name="text_size_four_heading_card_view">18sp</dimen>
+    <dimen name="text_size_all_states_heading">18sp</dimen>
+    <dimen name="margin_top_for_placeholders_text">5dp</dimen>
+    <dimen name="margin_top_headings_card_view">20dp</dimen>
+    <dimen name="margin_left_heading_states">50dp</dimen>
+    <dimen name="card_view_content_margin">15dp</dimen>
+    <dimen name="card_view_corner_radius">10dp</dimen>
+    <dimen name="card_view_elevation">10dp</dimen>
+    <dimen name="card_view_graph_margin_top">20dp</dimen>
+    <dimen name="card_view_graph_height">180dp</dimen>
+    <dimen name="pie_chart_margin">10dp</dimen>
+    <dimen name="pie_chart_padding">6dp</dimen>
+    <dimen name="card_view_pie_chart_ll_left_margin">10dp</dimen>
+    <dimen name="view_size">15dp</dimen>
+    <dimen name="view_text_margin_left">15dp</dimen>
 </resources>

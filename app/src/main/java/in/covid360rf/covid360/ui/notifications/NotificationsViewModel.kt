@@ -1,4 +1,4 @@
-package in.covid360rf.covid360.ui.notifications
+package `in`.covid360rf.covid360.ui.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
